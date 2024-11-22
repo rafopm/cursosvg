@@ -23,6 +23,8 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
+        pnpm:
+          version: 9.12.0
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.15
