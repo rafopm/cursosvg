@@ -1,0 +1,95 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
+
+<Layout>
+    <div>
+        <h1>Estilos en SVG</h1>
+
+        <h2>Cuadrado sin estilos</h2>
+        <h3>SVG</h3>
+        <Code
+            code={` <svg width="600" height="400">
+            <rect
+                x="10"
+                y="50"
+                width="500"
+                height="300"
+                fill="#e1be71"
+                stroke="#742748"
+                stroke-width="10"
+                stroke-linejoin="bevel"
+                ></rect>
+        </svg>`}
+            lang="html"
+        />
+        <h3>Resultado</h3>
+        <svg width="600" height="400">
+            <rect
+                x="10"
+                y="50"
+                width="500"
+                height="300"
+                fill="#e1be71"
+                stroke="#742748"
+                stroke-width="10"
+                stroke-linejoin="bevel"
+                class="ejemplo"></rect>
+        </svg>
+
+        <h2>Cuadrado con estilos</h2>
+
+        <h3>SVG</h3>
+        <Code
+            code={` <svg width="600" height="400">
+            <rect
+            class="ejemplo"
+                ></rect>
+        </svg>`}
+            lang="html"
+        />
+
+        <h3>Estilos</h3>
+        <Code
+            code={`.ejemplo {
+                fill: #e1be71;
+                stroke: green;
+                x: 10px;
+                y: 50px;
+                width: 500px;
+                height: 300px;
+                fill: #e1be71;
+                stroke: 742748;
+                stroke-width: 10;
+                stroke-linejoin: bevel;
+            }`}
+            lang="css"
+        />
+
+        <h3>Resultado</h3>
+
+        <svg width="600" height="400">
+            <rect class="ejemplo"></rect>
+        </svg>
+    </div>
+</Layout>
+
+<style>
+    svg {
+        border: 1px solid black;
+    }
+
+    .ejemplo {
+        fill: #e1be71;
+        stroke: green;
+        x: 10px;
+        y: 50px;
+        width: 500px;
+        height: 300px;
+        fill: #e1be71;
+        stroke: 742748;
+        stroke-width: 10;
+        stroke-linejoin: bevel;
+    }
+</style>

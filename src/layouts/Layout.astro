@@ -1,0 +1,25 @@
+---
+import Nav from "../components/Nav.astro";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Curso SVG</title>
+	</head>
+	<body>
+		<div
+			class="prose flex flex-row gap-4 "
+		>
+		<Nav />
+		<div class="p-4">
+			<slot  />
+		</div>
+			
+		</div>
+	</body>
+</html>
