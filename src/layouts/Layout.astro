@@ -12,14 +12,11 @@ import Nav from "../components/Nav.astro";
 		<title>Curso SVG</title>
 	</head>
 	<body>
-		<div
-			class="prose flex flex-row gap-4 "
-		>
-		<Nav />
-		<div class="p-4">
-			<slot  />
-		</div>
-			
+		<div class="prose flex flex-row gap-4">
+			<Nav />
+			<div class="p-4">
+				<slot />
+			</div>
 		</div>
 	</body>
 </html>
