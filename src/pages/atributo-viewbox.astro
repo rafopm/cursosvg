@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
+
+<Layout>
+    <div>
+        <h1>Atributo viewbox</h1>
+
+        <h2>Ejemplo usando el atributo viewBox</h2>
+        <Code
+            code={` <svg
+                width="500"
+                height="500"
+                viewBox="0 0 500 1000"
+                preserveAspectRatio="none"
+                class="background"
+            >
+                <circle cx="250" cy="250" r="150" fill="red"></circle>
+            </svg>`}
+            lang="html"
+        />
+
+        <svg
+            width="500"
+            height="500"
+            viewBox="0 0 500 1000"
+            preserveAspectRatio="none"
+            class="background"
+        >
+            <circle cx="250" cy="250" r="150" fill="red"></circle>
+        </svg>
+
+    </div>
+</Layout>
+
+<style>
+    .background {
+        background-color: yellow;
+    }
+
+    svg path {
+        stroke: brown;
+    }
+</style>

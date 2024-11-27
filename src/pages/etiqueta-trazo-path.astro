@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
+
+<Layout>
+    <div>
+        <h1>Etiqueta de trazo (path)</h1>
+
+        <h2>Ejemplo de cuadrado</h2>
+        <Code
+            code={`<svg width="400" height="400">
+                <path d="M10 10 H 90 V 90 H 10 Z" fill="red" />
+            </svg>`}
+            lang="html"
+        />
+
+        <svg width="200" height="200">
+            <path d="M10 10 H 90 V 90 H 10 Z" fill="red"></path>
+        </svg>
+
+        <h2>Línea entre puntos</h2>
+
+        <Code
+            code={`<svg width="600" height="400" class="background">
+                <path d="M10 10 L 200 100"></path>
+            </svg>`}
+            lang="html"
+        />
+        <svg width="250" height="200" class="background">
+            <path d="M10 10 L 200 100"></path>
+        </svg>
+
+
+        <h2>Curva cuadrática Bézier</h2>
+
+        <Code
+            code={`<svg width="600" height="120" >
+                <path d="M0,100 Q250,10 500,100" fill="none"></path>
+            </svg>`}
+            lang="html"
+        />
+        <svg width="600" height="120" >
+            <path d="M0,100 Q250,10 500,100" fill="none"></path>
+        </svg>
+
+
+        <h2>Curva cúbica</h2>
+
+        <Code
+            code={`<svg viewBox="-450 -450 900 900" >
+                <path d="M-291,215 C-151,-252 260,-215 304,183" fill="none"></path>
+            </svg>`}
+            lang="html"
+        />
+        <svg viewBox="-450 -450 900 900" >
+            <path d="M-291,215 C-151,-252 260,-215 304,183" fill="none"></path>
+        </svg>
+
+    </div>
+</Layout>
+
+<style>
+    .background {
+        background-color: yellow;
+    }
+
+    svg path {
+        stroke: brown;
+       
+    }
+</style>

@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
+
+<Layout>
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Ewert"
+        />
+    </head>
+
+    <div>
+        <h1>Etiquetas de texto</h1>
+
+        <h2>Texto centrado en horizontal y vertical</h2>
+        <Code
+            code={`<svg
+                width="850"
+                height="200"
+                viewBox="0 0 850 200"
+                preserveAspectRatio="none"
+                class="background"
+            >
+                <text
+                    x="50%"
+                    y="50%"
+                    dominant-baseline="middle"
+                    text-anchor="middle"
+                    font-size="100"
+                    font-family="Ewert"
+                    fill="#EF615E"
+                >
+                  Hola Mundo
+                </text>
+            </svg>`}
+            lang="html"
+        />
+
+        <svg
+            width="850"
+            height="200"
+            viewBox="0 0 850 200"
+            preserveAspectRatio="none"
+            class="background"
+        >
+            <text
+                x="50%"
+                y="50%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                font-size="100"
+                font-family="Ewert"
+                fill="#EF615E"
+            >
+              Hola Mundo
+            </text>
+        </svg>
+
+
+        <h2>Texto centrado en horizontal y vertical</h2>
+        <Code
+            code={`<svg
+                width="850"
+                height="200"
+                viewBox="0 0 850 200"
+                preserveAspectRatio="none"
+                class="background"
+            >
+                <text
+                    x="50%"
+                    y="50%"
+                    dominant-baseline="middle"
+                    text-anchor="middle"
+                    font-size="100"
+                    font-family="Ewert"
+                    fill="#EF615E"
+                >
+                  Hola Mundo
+                </text>
+            </svg>`}
+            lang="html"
+        />
+
+        <svg
+            width="850"
+            height="200"
+            viewBox="0 0 850 200"
+            preserveAspectRatio="none"
+            class="background"
+        >
+            <text
+                x="50%"
+                y="50%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                font-size="100"
+                font-family="Ewert"
+                fill="#EF615E"
+            >
+              Hola Mundo
+            </text>
+        </svg>
+        
+    </div>
+</Layout>
+
+<style>
+    .background {
+        background-color: yellow;
+    }
+
+    svg path {
+        stroke: brown;
+    }
+</style>
